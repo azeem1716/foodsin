@@ -1,38 +1,150 @@
-.App {
-  text-align: center;
+
+:root {
+    --theme-color: #556155;
+    --white-color: #fff;
+    --primary-color: #13171a ;
+    --text-color:#d7aa95;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+
+.topbar {
+    background-color: var(--theme-color);
+    padding: 10px 15px;
+    text-align: center;
+    color: var(--white-color);
+    font-weight: 600;
+    position: relative;
+    z-index: 3;
+    font-size: .9rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.topbar-container{
+  background-color: var(--white-color);
+}
+.topbar-btn{
+  background-color: var(--theme-color);
+  color: var(--text-color);
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.header-logo{
+  height: 120px;
+  border-radius: 100px;
+  position: relative;
+  top: 20px;
+  z-index: 10;
+}
+
+.footer{
+  background-color: var(--primary-color);
+}
+
+
+
+.mySwiper {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+}
+
+.mySwiper img {
+  width: 100%;
+  height: auto;
+}
+
+.popular-item-card {
+  /* background-image: url('./assets/images/Popular-item-1.jpg'); */
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid black;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+  background-position: center; /* Ensures the scaling looks centered */
+}
+
+.popular-item-card:hover {
+  transform: scale(1.02); /* Slightly scales up the element */
+  background-size: 110%; /* Scales the background image */
+}
+
+.popular-item-heading{
+  font-size: 18px;
+}
+
+.popular-item-price{
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+.deals-card{
+  box-shadow:  5px 5px 10px #bebebe,
+  -5px -5px 10px #ffffff;
+}
+
+.discount-tag {
+  position: absolute;
+  top: -30px;
+  display: inline-block;
+  background-color: #FFD700; /* Yellow color */
+  color: black;
+  font-weight: bold;
+  padding: 5px 15px;
+  font-size: 14px;
+  transform: skew(-15deg); /* Slanted effect */
+  display: inline-block;
+}
+
+.discount-tag span {
+  transform: skew(15deg); /* Reset text to be straight */
+  display: inline-block;
+}
+.w-40{
+  width: 40% !important;
+}
+.w-60{
+  width: 60% !important;
+}
+.social-icons .social-icon {
+  color: white; /* Set icon color to white */
+}
+
+.social-icons .social-icon  { /*This targets the SVG within FontAwesome*/
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/*Optional: Add hover effect*/
+.social-icons .social-icon:hover {
+  color: lightgray; /*Example hover color*/
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.footer-links {
+
+  color: #8c8c8c;
+  padding: 15px 0;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #cccccc;
+}
+
+.footer-links .separator {
+  color: #ffffff;
+  margin: 0 10px;
+}
+
+.footer-links .powered-by {
+  font-weight: 400;
 }
